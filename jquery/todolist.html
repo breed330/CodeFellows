@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+    font-family:"Helvetica Neue", Arial, Helvetica, sans-serif;
+    font-size:75%;
+    color:#222;
+    background:#fff;
+    margin:10%;
+    text-align:center;
+ }
+ #title { font-size:200%; font-weight:bold; line-height: 1.4; color:#09f;}
+ #list { 
+    border: 1px solid black; 
+    border-weight: thin; 
+    margin:0 25%; 
+    padding: 5px 50px;
+    text-align:left;
+}
+</style>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+</script>
+<script>
+
+// Code Fellows Exercise: JQuery
+// B. Reed submission
+//
+// No idea whether follows jquery best practices; created based on tutoritals of basics
+// Scope creep ideas: 
+//     * undo function
+//     * would be better to use css to hide vs jquery's hide()?
+//     * make alternate tasks different colors
+
+
+$(document).ready(function(){
+
+//static
+var tasktemplate = "<div class='taskitem'></div>";  //new task html beg
+var blankInput = "";
+
+  //add task - enter key event
+  $('#txtTask').keypress(function(event){
+	var keycode = (event.keyCode ? event.keyCode : event.which);
+	if(keycode == '13'){
+        //if enter key - add task
+		addTask($("#txtTask").val());
+	}
+  });
+  
+  //add task - button event
+  $("#btnTask").click(function(){
+    //get text from text box
+    addTask($("#txtTask").val());
+  });
+  
+  //add a task with text parameter
+  function addTask(tnew){
+    var tnewhtml = $(tasktemplate).text(tnew);
+    //append to tasklist
+    $("#list").append(tnewhtml);
+    //clear out input box
+    $("#txtTask").val(blankInput);  
+  }
+
+  //remove task - include all new elements
+  $(document).on("dblclick",".taskitem",function(){
+    //remove item
+    $(this).hide();
+  });
+  
+
+  
+  
+});
+
+</script>
+</head>
+<body>
+<div id="title">Task List</div>
+<div id="lblTask">
+    Enter a new task here: <input id="txtTask"/>
+    <button id="btnTask">Add</button>
+</div>
+
+
+<p id="description">Double click on task to remove it.</p>
+<div id="list"/>
+
+
+</body>
+</html>
