@@ -15,8 +15,19 @@ This was the first time I dabbled into these technologies (JQuery, Python, Djang
 
 
 ####JQuery Todo list
+https://github.com/breed330/CodeFellows/blob/master/jquery/todolist.html
+Run: http://jsfiddle.net/EehSL/2/
+
 
 
 ####Python OO Library
+https://github.com/breed330/CodeFellows/blob/master/python/library.py
+Run: http://repl.it/OVK
+
+
 
 ####Django User Editor
+
+
+
+
