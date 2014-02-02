@@ -1,10 +1,12 @@
 Here are the three exercises requested:
 
-. | Summary | .
---|-----------------|----------------------
+no | Exercise  | Location
+---|---------- | -------------
 1 | JQuery Todo list | jquery/todolist.html
 2 | Python OO Library | python/library.py 
 3 | Django User Editor | django/TODO 
+
+
 
 ###Notes on exercises:
 ####General comments
